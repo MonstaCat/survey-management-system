@@ -11,6 +11,6 @@ class Question extends Model
     protected $connection = 'mongodb';
     protected $collection = 'questions';
     protected $fillable = [
-        'question', 'type', 'options', 'conditional'
+        'question', 'answers', 'conclusion', 'recommendation', 'question_order'
     ];
 }
