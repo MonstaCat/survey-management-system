@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Admin Routes
+Route::get('/admin', [AdminController::class, 'index']);
