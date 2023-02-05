@@ -43,8 +43,8 @@
     </div>
 
     <!-- Nav Item - Question -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+    <li class="nav-item {{ Route::currentRouteName() === 'admin.question' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.question') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Question</span></a>
     </li>
