@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\QuestionController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,8 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('questions', 'App\Http\Controllers\QuestionController@index');
-Route::post('questions', 'App\Http\Controllers\QuestionController@store');
-Route::get('questions/{question}', 'App\Http\Controllers\QuestionController@show');
-Route::put('questions/{question}', 'App\Http\Controllers\QuestionController@update');
-Route::delete('questions/{question}', 'App\Http\Controllers\QuestionController@delete');
+Route::get('questions', [QuestionController::class, 'index']);
+Route::post('questions', [QuestionController::class, 'store']);
+Route::get('questions/{question}', [QuestionController::class, 'show']);
+Route::put('questions/{question}', [QuestionController::class, 'update']);
+Route::delete('questions/{question}', [QuestionController::class, 'delete']);
