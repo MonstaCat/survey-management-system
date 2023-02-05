@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 // Admin Routes
-Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/admin/question', [AdminController::class, 'question'])->name('admin.question');
