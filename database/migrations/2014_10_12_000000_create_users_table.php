@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::create('users', function ($collection) {
+            $collection->index('google_id');
+            $collection->string('name');
+            $collection->string('email')->unique();
+            $collection->string('password');
+            $collection->timestamps();
         });
     }
 
