@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,9 @@ Route::get('/', function () {
 
 // Admin Routes
 Route::get('/admin', [AdminController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login/google', [App\Http\Controllers\Auth\LoginController::class, 'LoginWithGoogle'])->name('login.google');
+Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'GoogleCallback']);
