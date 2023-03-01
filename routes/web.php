@@ -20,8 +20,10 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-// Admin Routes
+// Admin dashboard route
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
+// Admin question route
 Route::get('/admin/question', [AdminController::class, 'question'])->name('admin.question');
 Route::get('admin/add_question', [AdminController::class, 'question_add'])->name('question.add');
 Route::post('admin/store_question', [AdminController::class, 'question_store'])->name('question.store');
