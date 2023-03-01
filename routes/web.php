@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,9 @@ Route::post('admin/question/{question}', [AdminController::class, 'question_put'
 Route::post('admin/add_answer', [AdminController::class, 'answer_add'])->name('answer.add');
 Route::post('admin/update/{question}', [AdminController::class, 'answer_update'])->name('answer.update');
 Route::post('admin/delete/{question}', [AdminController::class, 'answer_delete'])->name('answer.delete');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login/google', [App\Http\Controllers\Auth\LoginController::class, 'LoginWithGoogle'])->name('login.google');
+Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'GoogleCallback']);
