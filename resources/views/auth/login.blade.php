@@ -13,14 +13,6 @@
             Selamat Datang <br />
             <span class="text-primary">di platform Survey Management</span>
           </h1>
-          <p style="color: hsl(217, 10%, 50.8%)">
-            platform ini digunakan untuk mengajukan survey dan pertanyaan
-            kepada umum dengan tujuan Lorem ipsum dolor sit amet 
-            consectetur adipisicing elit.
-            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-            quibusdam tempora at cupiditate quis eum maiores libero
-            veritatis? Dicta facilis sint aliquid ipsum atque?
-          </p>
         </div>
 
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -73,7 +65,7 @@
                 <!-- Register buttons -->
                 <div class="text-center">
                   <p class="mb-2">or</p>
-                  <a href="{{ route('login.google') }}" class="btn btn-block btn-lg btn-outline-info">{{ __('Login with Google') }}</a>
+                  <a href="{{ route('login.google') }}" class="btn btn-block btn-lg text-light" style="background-color: #dd4b39;"><i class="fab fa-google me-2"></i>{{ __('Login with Google') }}</a>
                   @if (Route::has('password.request'))
                       <a class="btn btn-link float-left pl-0 mt-2" href="{{ route('password.request') }}">
                           {{ __('Forgot Your Password?') }}
