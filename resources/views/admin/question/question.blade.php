@@ -57,7 +57,7 @@
                                 </span>
                                 <span class="text">Edit</span>
                             </a>
-                            <a href="#" class="btn btn-sm btn-danger btn-icon-split my-1">
+                            <a href="{{ '/admin/question/delete/'.$question['_id'] }}" class="btn btn-sm btn-danger btn-icon-split my-1">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-trash"></i>
                                 </span>
