@@ -54,4 +54,13 @@ class SurveyResultController extends Controller
         // Redirect the user to the result page
         return redirect('/home');
     }
+
+    public function result_delete(Request $request, $id)
+    {
+        $result = SurveyResult::findOrFail($id);
+        
+        $result->delete();
+
+        return redirect('admin/respondents');
+    }
 }
