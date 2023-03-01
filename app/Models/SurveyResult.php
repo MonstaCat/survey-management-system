@@ -11,6 +11,6 @@ class SurveyResult extends Model
     protected $connection = 'mongodb';
     protected $collection = 'survey_result';
     protected $fillable = [
-        'google_id', 'question_id', 'answer_index'
+        'google_id', 'question_id', 'answer', 'conclusion', 'recommendation', 'question', 'name'
     ];
 }
