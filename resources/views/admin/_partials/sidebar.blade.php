@@ -43,7 +43,7 @@
     </div>
 
     <!-- Nav Item - Question -->
-    <li class="nav-item {{ $currentRoute === 'admin.question' ? 'active' : '' }}">
+    <li class="nav-item {{ ($currentRoute === 'admin.question' || $currentRoute === 'admin.question.update') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.question') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Question</span></a>
