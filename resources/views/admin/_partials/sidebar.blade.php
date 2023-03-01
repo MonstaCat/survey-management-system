@@ -30,7 +30,7 @@
     <!-- Nav Item - Respondents -->
     <li class="nav-item {{ ($currentRoute === 'admin.respondents') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.respondents') }}">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-users"></i>
             <span>Respondents</span></a>
     </li>
 
@@ -45,7 +45,7 @@
     <!-- Nav Item - Question -->
     <li class="nav-item {{ ($currentRoute === 'admin.question' || $currentRoute === 'admin.question.update') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.question') }}">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-comments"></i>
             <span>Question</span></a>
     </li>
 
