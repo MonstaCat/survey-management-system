@@ -4,15 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use DB;
 
 use App\Models\Question;
+use App\Models\SurveyResult;
+use App\Models\User;
 
 class AdminController extends Controller
 {
     public function index()
     {
+        $currentRoute = Route::currentRouteName();
+
+        $survey_result = SurveyResult::all();
+        $questions = Question::all();
+        $users = User::all();
+        $total_completed_survey_users = SurveyResult::distinct('google_id')->get()->count();
+        
         $data = [
-            'title' => 'Dashboard'
+            'title' => 'Dashboard',
+            'survey_result' => $survey_result,
+            'questions' => $questions,
+            'users' => $users,
+            'total_completed_survey' => $total_completed_survey_users,
+            'currentRoute' => $currentRoute
         ];
         
         return view('admin.index', $data);
