@@ -65,7 +65,7 @@
 
                 <!-- Submit button -->
                 <div class="text-center">
-                    <button class="btn btn-info btn-lg btn-block text-light mb-2" type="submit">
+                    <button class="btn btn-info btn-block text-light mb-2" type="submit">
                         {{ __('Login') }}
                     </button>
                 </div>
@@ -73,7 +73,7 @@
                 <!-- Register buttons -->
                 <div class="text-center">
                   <p class="mb-2">or</p>
-                  <a href="{{ route('login.google') }}" class="btn btn-block btn-lg btn-outline-info">{{ __('Login with Google') }}</a>
+                  <a href="{{ route('login.google') }}" class="btn btn-block btn-outline-info">{{ __('Login with Google') }}</a>
                   @if (Route::has('password.request'))
                       <a class="btn btn-link float-left pl-0 mt-2" href="{{ route('password.request') }}">
                           {{ __('Forgot Your Password?') }}
