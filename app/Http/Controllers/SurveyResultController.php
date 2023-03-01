@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SurveyResult;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+use App\Models\SurveyResult;
 
 class SurveyResultController extends Controller
 {
@@ -11,12 +13,16 @@ class SurveyResultController extends Controller
     {
         $result = SurveyResult::all();
 
+        // Store current route name, since after Route::dispatch, route name is not accessible
+        $currentRoute = Route::currentRouteName();
+
         $data = [
             'title' => 'Survey Result',
+            'currentRoute' => $currentRoute,
             'result' => $result
         ];
         
-        return view('admin.result', $data);
+        return view('admin.respondents.respondents', $data);
     }
 
     public function store(Request $request)
@@ -24,7 +30,11 @@ class SurveyResultController extends Controller
         $data = $request->validate([
             'google_id' => 'required|varchar',
             'question_id' => 'required|varchar',
-            'answer_index' => 'required|varchar',
+            'answer' => 'required|varchar',
+            'concolusion' => 'required|varchar',
+            'question' => 'required|varchar',
+            'recommendation' => 'required|varchar',
+            'name' => 'required|varchar',
         ]);
 
         SurveyResult::create($data);

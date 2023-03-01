@@ -28,8 +28,8 @@
     </div>
 
     <!-- Nav Item - Respondents -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+    <li class="nav-item {{ ($currentRoute === 'admin.respondents') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.respondents') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Respondents</span></a>
     </li>
