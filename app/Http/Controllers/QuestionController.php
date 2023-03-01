@@ -9,7 +9,8 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        return Question::all();
+        $question = Question::all();
+        return response()->json($question);
     }
 
     public function store(Request $request)
