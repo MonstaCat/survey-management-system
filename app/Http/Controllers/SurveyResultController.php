@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
+use App\Models\Question;
 use App\Models\SurveyResult;
 
 class SurveyResultController extends Controller
@@ -27,18 +29,29 @@ class SurveyResultController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'google_id' => 'required|varchar',
-            'question_id' => 'required|varchar',
-            'answer' => 'required|varchar',
-            'concolusion' => 'required|varchar',
-            'question' => 'required|varchar',
-            'recommendation' => 'required|varchar',
-            'name' => 'required|varchar',
-        ]);
+        $answers = $_POST['answer'];
+        $user_id = Auth::user()->google_id; 
+        $name = Auth::user()->name;
 
-        SurveyResult::create($data);
+        // Loop through the answers and store each one in the survey_result collection
+        foreach ($answers as $question_id => $answer_index) {
+            $question = Question::find($question_id);
+            $conclusion = $question->answers[$answer_index]['conclusion'];
+            $recommendation = $question->answers[$answer_index]['recommendation'];
 
-        return response()->json(['message' => 'Survey result created successfully.']);
+            $survey_result = new SurveyResult;
+            $survey_result->google_id = $user_id;
+            $survey_result->question_id = $question_id;
+            $survey_result->question = $question->question;
+            $survey_result->answer = $question->answers[$answer_index]['answer'];
+            $survey_result->conclusion = $conclusion;
+            $survey_result->recommendation = $recommendation;
+            $survey_result->name = $name;
+
+            $survey_result->save();
+        }
+
+        // Redirect the user to the result page
+        return redirect('/home');
     }
 }
