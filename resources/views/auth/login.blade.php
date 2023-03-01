@@ -57,7 +57,7 @@
 
                 <!-- Submit button -->
                 <div class="text-center">
-                    <button class="btn btn-info btn-lg btn-block text-light mb-2" type="submit">
+                    <button class="btn btn-info btn-block text-light mb-2" type="submit">
                         {{ __('Login') }}
                     </button>
                 </div>
