@@ -33,7 +33,7 @@ Route::post('admin/update/{question}', [AdminController::class, 'answer_update']
 Route::post('admin/delete/{question}', [AdminController::class, 'answer_delete'])->name('answer.delete');
 
 Route::get('/admin/respondents', [SurveyResultController::class, 'index'])->name('admin.respondents');
-Route::get('/survey/submit', [SurveyResultController::class, 'store'])->name('survey.submit');
+Route::post('/survey/submit', [SurveyResultController::class, 'store'])->name('survey.submit');
 
 Auth::routes();
 
