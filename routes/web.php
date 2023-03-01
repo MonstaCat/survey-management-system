@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\SurveyResultController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::post('admin/question/{question}', [AdminController::class, 'question_put'
 Route::post('admin/add_answer', [AdminController::class, 'answer_add'])->name('answer.add');
 Route::post('admin/update/{question}', [AdminController::class, 'answer_update'])->name('answer.update');
 Route::post('admin/delete/{question}', [AdminController::class, 'answer_delete'])->name('answer.delete');
+
+Route::get('/admin/result', [SurveyResultController::class, 'index'])->name('admin.result');
 
 Auth::routes();
 
