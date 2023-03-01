@@ -23,6 +23,7 @@
                         <th>Answer</th>
                         <th>Conclusion</th>
                         <th>Recommendation</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -32,6 +33,7 @@
                         <th>Answer</th>
                         <th>Conclusion</th>
                         <th>Recommendation</th>
+                        <th>Action</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -42,6 +44,14 @@
                             <td>{{ $data['answer'] }}</td>
                             <td>{{ $data['conclusion'] }}</td>
                             <td>{{ $data['recommendation'] }}</td>
+                            <td>
+                                <a href="{{ '/admin/result/delete/'.$data['_id'] }}" class="btn btn-sm btn-danger btn-icon-split my-1">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-trash"></i>
+                                    </span>
+                                    <span class="text">Delete</span>
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
