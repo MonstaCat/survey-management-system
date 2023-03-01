@@ -11,10 +11,12 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <h1 class="my-5 display-3 fw-bold ls-tight">
             Selamat Datang <br />
-            <span class="text-primary">di platform survey</span>
+            <span class="text-primary">di platform Survey Management</span>
           </h1>
           <p style="color: hsl(217, 10%, 50.8%)">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            platform ini digunakan untuk mengajukan survey dan pertanyaan
+            kepada umum dengan tujuan Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit.
             Eveniet, itaque accusantium odio, soluta, corrupti aliquam
             quibusdam tempora at cupiditate quis eum maiores libero
             veritatis? Dicta facilis sint aliquid ipsum atque?
@@ -56,7 +58,7 @@
 
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-center mb-4">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <input class="form-check-input me-2" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                     </label>
@@ -64,7 +66,7 @@
 
                 <!-- Submit button -->
                 <div class="text-center">
-                    <button type="submit"  class="btn btn-info btn-lg btn-block text-light mb-4">
+                    <button class="btn btn-info btn-lg btn-block text-light mb-4" type="submit">
                         {{ __('Login') }}
                     </button>
                 </div>
