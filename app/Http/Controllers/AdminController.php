@@ -112,6 +112,15 @@ class AdminController extends Controller
         return redirect('admin/question');
     }
 
+    public function question_delete(Request $request, $id)
+    {
+        $question = Question::findOrFail($id);
+        
+        $question->delete();
+
+        return redirect('admin/question');
+    }
+
     public function answer_delete(Request $request, $id)
     {
         $question = Question::findOrFail($id);
