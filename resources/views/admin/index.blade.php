@@ -36,12 +36,12 @@
                         </div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
-                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ ($total_completed_survey / count($users)) * 100 }}%</div>
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $total_respondents }}%</div>
                             </div>
                             <div class="col">
                                 <div class="progress progress-sm mr-2">
                                     <div class="progress-bar bg-info" role="progressbar"
-                                        style="width: {{ ($total_completed_survey / count($users)) * 100 }}%" aria-valuenow="{{ ($total_completed_survey / count($users)) * 100 }}" aria-valuemin="0"
+                                        style="width: {{ $total_respondents }}%" aria-valuenow="{{ $total_respondents }}" aria-valuemin="0"
                                         aria-valuemax="100">
                                     </div>
                                 </div>
