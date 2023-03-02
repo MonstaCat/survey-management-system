@@ -65,7 +65,7 @@
                 <!-- Register buttons -->
                 <div class="text-center">
                   <p class="mb-2">or</p>
-                  <a href="{{ route('login.google') }}" class="btn btn-block btn-lg text-light" style="background-color: #dd4b39;"><i class="fab fa-google me-2"></i>{{ __('Login with Google') }}</a>
+                  <a href="{{ route('login.google') }}" class="btn btn-block text-light" style="background-color: #dd4b39;"><i class="fab fa-google me-2"></i>{{ __('Login with Google') }}</a>
                   @if (Route::has('password.request'))
                       <a class="btn btn-link float-left pl-0 mt-2" href="{{ route('password.request') }}">
                           {{ __('Forgot Your Password?') }}
