@@ -45,7 +45,24 @@
                             <td>{{ $data['conclusion'] }}</td>
                             <td>{{ $data['recommendation'] }}</td>
                             <td>
-                                <a href="{{ '/admin/result/delete/'.$data['_id'] }}" class="btn btn-sm btn-danger btn-icon-split my-1">
+                                <a 
+
+                                onclick="Swal.fire({
+                                        title: 'Are you sure?',
+                                        text: 'You wont be able to revert this!',
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#d33',
+                                        confirmButtonText: 'Yes, delete it!'
+                                        }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            window.location.href = '{{ '/admin/result/delete/'.$data['_id'] }}';
+                                            
+                                        }
+                                        }) "
+
+                                class="btn btn-sm btn-danger btn-icon-split my-1">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-trash"></i>
                                     </span>
@@ -66,5 +83,8 @@
         $('#question-table').DataTable();
     });
 </script>
+
+<script src="sweetalert2.all.min.js"></script>
+
 
 @stop
