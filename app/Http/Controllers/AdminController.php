@@ -21,8 +21,7 @@ class AdminController extends Controller
         $users = User::all();
         $total_completed_survey_users = SurveyResult::distinct('google_id')->get()->count();
 
-        $total_respondents = null;
-        if ($total_respondents == 0) {
+        if (count($users) == 0) {
             $total_respondents = 0;
         } else {
             $total_respondents = ($total_completed_survey_users / count($users)) * 100;
