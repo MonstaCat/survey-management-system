@@ -1,11 +1,48 @@
-### Sprint board
+### Our sprint board 🏃‍♂️
 https://trello.com/b/LCxB3gxg/survey-management-system-sprint-board
 
-### Members
-- Andika
-- Dimas
-- Randi
-- Tri
+### Meet the contributors 👋
+- Dika a.k.a [@MonstaCat](https://github.com/MonstaCat) as Project Leader 
+- Dimas a.k.a [@DimasNughadi](https://github.com/DimasNughadi) as Backend Developer
+- Randi a.k.a [@RandiGustinanda](https://github.com/RandiGustinanda) as Backend Developer
+- Tripong a.k.a [@triiipooong](https://github.com/triiipooong) as Frontend Developer
+
+## Requirements ⚠️
+
+This project using Laravel 9 for the framework and using MongoDB Atlas for the database, this following list is need to install to your environment to run this project locally.
+- PHP 8.0 - 8.2
+- pecl PHP Extension
+- Enable <b>extension="mongodb.so"</b> in php.ini file
+
+## Installation 🔧
+
+<b>Step 1:</b>
+
+Run this following commands in your terminal
+
+`composer install` and `composer update`
+
+and wait until the process is done.
+
+<b>Step 2:</b>
+
+Run this following commands in your terminal
+
+`npm run build`
+
+<b>Step 3:</b>
+
+Run this following commands in your terminal to start local server
+
+`php artisan serve`
+
+## Preview 🔭
+![Login Page](https://github.com/MonstaCat/survey-management-system/blob/master/public/screenshot/login.png?raw=true)
+![Survey Page](https://github.com/MonstaCat/survey-management-system/blob/master/public/screenshot/question-survey.png?raw=true)
+![Result Page](https://github.com/MonstaCat/survey-management-system/blob/master/public/screenshot/survey-result.png?raw=true)
+![Admin Dashboard](https://github.com/MonstaCat/survey-management-system/blob/master/public/screenshot/dashboard.png?raw=true)
+![Admin Question](https://github.com/MonstaCat/survey-management-system/blob/master/public/screenshot/question.png?raw=true)
+![Admin Question Details](https://github.com/MonstaCat/survey-management-system/blob/master/public/screenshot/question-details.png?raw=true)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
@@ -29,46 +66,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
