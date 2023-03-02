@@ -20,13 +20,20 @@ class AdminController extends Controller
         $questions = Question::all();
         $users = User::all();
         $total_completed_survey_users = SurveyResult::distinct('google_id')->get()->count();
-        
+
+        if (count($users) == 0) {
+            $total_respondents = 0;
+        } else {
+            $total_respondents = ($total_completed_survey_users / count($users)) * 100;
+        }
+
         $data = [
             'title' => 'Dashboard',
             'survey_result' => $survey_result,
             'questions' => $questions,
             'users' => $users,
             'total_completed_survey' => $total_completed_survey_users,
+            'total_respondents' => $total_respondents,
             'currentRoute' => $currentRoute
         ];
         
@@ -193,6 +200,30 @@ class AdminController extends Controller
         // Redirect back to the question edit page with a success message.
         return redirect()->route('question.update', $question_id)->with('success', 'Question updated successfully');
 
+    }
+
+    public function users()
+    {
+        $users = User::all();
+
+        $currentRoute = Route::currentRouteName();
+
+        $data = [
+            'title' => 'Registered Users',
+            'currentRoute' => $currentRoute,
+            'users' => $users
+        ];
+        
+        return view('admin.registered_users.users', $data);
+    }
+
+    public function user_delete(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        
+        $user->delete();
+
+        return redirect('admin/users');
     }
 }
 

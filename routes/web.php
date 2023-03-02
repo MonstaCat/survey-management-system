@@ -34,6 +34,11 @@ Route::post('admin/add_answer', [AdminController::class, 'answer_add'])->name('a
 Route::post('admin/update/{question}', [AdminController::class, 'answer_update'])->name('answer.update');
 Route::post('admin/delete/{question}', [AdminController::class, 'answer_delete'])->name('answer.delete');
 
+// Admin users route
+Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+Route::get('/admin/user/delete/{id}', [AdminController::class, 'user_delete'])->name('admin.users.delete');
+
+// Admin respondents route
 Route::get('/admin/respondents', [SurveyResultController::class, 'index'])->name('admin.respondents');
 Route::get('/admin/result/delete/{id}', [SurveyResultController::class, 'result_delete'])->name('result.delete');
 Route::post('/survey/submit', [SurveyResultController::class, 'store'])->name('survey.submit');

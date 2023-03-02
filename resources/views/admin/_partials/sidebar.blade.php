@@ -30,8 +30,13 @@
     <!-- Nav Item - Respondents -->
     <li class="nav-item {{ ($currentRoute === 'admin.respondents') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.respondents') }}">
-            <i class="fas fa-fw fa-users"></i>
+            <i class="fas fa-fw fa-file"></i>
             <span>Respondents</span></a>
+    </li>
+    <li class="nav-item {{ ($currentRoute === 'admin.users') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.users') }}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Registered Users</span></a>
     </li>
 
     <!-- Divider -->
