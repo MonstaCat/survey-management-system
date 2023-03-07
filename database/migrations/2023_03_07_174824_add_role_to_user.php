@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function ($collection) {
-            $collection->index('google_id');
-            $collection->string('name');
-            $collection->string('email')->unique();
-            $collection->string('password');
+        Schema::table('users', function (Blueprint $collection) {
             $collection->string('role')->default('0');
-            $collection->timestamps();
         });
     }
 

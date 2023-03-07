@@ -13,11 +13,13 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
+    //login menggunakan google
     public function loginWithGoogle()
     {
         return Socialite::driver('google')->redirect();
     }
     
+    //respon ketika login
     public function GoogleCallback()
     {
         $user = Socialite::driver('google')->user();
@@ -30,6 +32,7 @@ class LoginController extends Controller
             $newUser->name = $user->name;
             $newUser->email = $user->email;
             $newUser->google_id = $user->id;
+            $newUser->role = $user->role='0';
             $newUser->save();
     
             Auth::login($newUser, true);
