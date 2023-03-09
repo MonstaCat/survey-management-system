@@ -71,6 +71,9 @@
                           {{ __('Forgot Your Password?') }}
                       </a>
                   @endif
+                  <!-- <small class="d-block mt-3">Doesn't have an account? <a class="text-danger" href="/register">
+                        Register
+                        Now!</a></small> -->
                 </div>
               </form>
             </div>
