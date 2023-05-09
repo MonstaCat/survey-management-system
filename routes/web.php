@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\SurveyResultController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,13 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::post('/add_answer', [AdminController::class, 'answer_add'])->name('answer.add');
     Route::post('/update/{question}', [AdminController::class, 'answer_update'])->name('answer.update');
     Route::post('/delete/{question}', [AdminController::class, 'answer_delete'])->name('answer.delete');
+    // Admin question category
+    Route::get('/category', [CategoryController::class, 'index'])->name('admin.category');
+    Route::get('/add_category', [CategoryController::class, 'add'])->name('category.add');
+    Route::post('/store_category', [CategoryController::class, 'store'])->name('category.store');
+    Route::get('/category/{category}', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::get('/category/delete/{category}', [CategoryController::class, 'delete'])->name('category.delete');
+    Route::post('/category/{category}', [CategoryController::class, 'update'])->name('category.update');
     // Admin dashboard route
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     // Admin users route
