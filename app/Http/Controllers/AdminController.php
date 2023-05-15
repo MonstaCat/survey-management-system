@@ -9,6 +9,7 @@ use DB;
 use App\Models\Question;
 use App\Models\SurveyResult;
 use App\Models\User;
+use App\Models\Category;
 
 class AdminController extends Controller
 {
@@ -51,10 +52,13 @@ class AdminController extends Controller
         // Decode the json into and make it into array
         $questions = json_decode(Route::dispatch($response)->getContent(), true);
 
+        $categories = Category::all();
+
         $data = [
             'title' => 'Question',
             'currentRoute' => $currentRoute,
-            'questions' => $questions
+            'questions' => $questions,
+            'categories' => $categories
         ];
         
         return view('admin.question.question', $data);
@@ -64,10 +68,12 @@ class AdminController extends Controller
     {
         // Store current route name, since after Route::dispatch, route name is not accessible
         $currentRoute = Route::currentRouteName();
+        $category = Category::all();
 
         $data = [
             'title' => 'Question Add',
             'currentRoute' => $currentRoute,
+            'category' => $category
         ];
         
         return view('admin.question.question_add', $data);
@@ -92,6 +98,7 @@ class AdminController extends Controller
         $question = new Question([
             'question' => $input['question'],
             'question_order' => $input['question_order'],
+            'category' => $input['category'],
             'answers' => $answerArray,
         ]);
 
@@ -116,10 +123,13 @@ class AdminController extends Controller
         // Decode the json into and make it into array
         $question = json_decode(Route::dispatch($response)->getContent(), true);
 
+        $category = Category::all();
+
         $data = [
             'title' => 'Question Update',
             'currentRoute' => $currentRoute,
-            'question' => $question
+            'question' => $question,
+            'category' => $category,
         ];
         
         return view('admin.question.question_update', $data);
