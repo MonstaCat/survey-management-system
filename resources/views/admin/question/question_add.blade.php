@@ -23,6 +23,14 @@
                 <input type="text" class="form-control" id="question_order" name="question_order" value="">
             </div>
             <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" name="category">
+                    @foreach($category as $data)
+                        <option value="{{ $data['_id'] }}">{{ $data['category'] }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="question">Question</label>
                 <input type="text" class="form-control" id="question" name="question" value="">
             </div>

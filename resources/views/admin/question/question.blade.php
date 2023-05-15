@@ -10,8 +10,22 @@
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="category-filter">Filter by Category:</label>
+            <select class="form-control" id="category-filter">
+                <option value="">All Categories</option>
+                @foreach($categories as $category)
+                <option value="{{ $category['_id'] }}">{{ $category['category'] }}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary float-left">Question List</h6>
+        <h6 class="m-0 font-weight-bold text-primary float-left">Questions List</h6>
         <a href="{{ route('question.add') }}" class="btn btn-primary btn-icon-split float-right">
             <span class="icon text-white-50">
                 <i class="fas fa-plus"></i>
@@ -20,30 +34,43 @@
         </a>    
     </div>
     <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="question-table" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Question Order</th>
-                        <th>Question</th>
-                        <th>Total Answer</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Question Order</th>
-                        <th>Question</th>
-                        <th>Total Answer</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
-                <tbody>
+    <div class="table-responsive">
+        <table class="table table-bordered" id="question-table" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th><b>#</b></th>
+                    <th>Question</th>
+                    <th>Total Answer</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th><b>#</b></th>
+                    <th>Question</th>
+                    <th>Total Answer</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+            <tbody>
                 @foreach($questions as $question)
-                    <tr>
+                    <tr data-category="{{ $question['category'] }}">
                         <td>{{ $question['question_order'] }}</td>
                         <td>{{ $question['question'] }}</td>
                         <td>{{ count($question['answers']) }}</td>
+                        <td>
+                            @if($question['category'])
+                            @foreach($categories as $category)
+                                @if($category['_id'] == $question['category'])
+                                    {{ $category['category'] }}
+                                @endif
+                            @endforeach
+                            @else
+                                No Category
+                            @endif
+                        </td>
                         <td>
                             <a href="#" class="btn btn-sm btn-primary btn-icon-split my-1" data-toggle="modal" data-target="#detailsModal-{{ $question['_id'] }}">
                                 <span class="icon text-white-50">
@@ -80,16 +107,13 @@
                                 </span>
                                 <span class="text">Delete</span>
                             </a>
-                            
                         </td>
                     </tr>
                 @endforeach
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
     </div>
 </div>
-
 <!-- Details Modal-->
 @foreach($questions as $question)
 <div class="modal fade" id="detailsModal-{{ $question['_id'] }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -147,6 +171,24 @@
 <script>
     $(document).ready(function() {
         $('#question-table').DataTable();
+    });
+    
+    $(document).ready(function() {
+        $('#category-filter').change(function() {
+            var selectedCategory = $(this).val();
+            filterQuestions(selectedCategory);
+        });
+
+        function filterQuestions(categoryId) {
+            $('#question-table tbody tr').each(function() {
+                var questionCategory = $(this).data('category');
+                if (categoryId === '' || questionCategory == categoryId) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
     });
 </script>
 
