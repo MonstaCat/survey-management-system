@@ -11,7 +11,7 @@
 
 		@include('user._partials.navbar')
 
-		<div class="container-fluid py-4">
+		<div class="container-fluid px-2 px-md-4">
 
 			@yield('content')
 
@@ -21,9 +21,8 @@
 
 	</main>
 
-	@include('user._partials.plugins')
-
 	@include('user._partials.scripts')
+  
 </body>
 
 </html>
