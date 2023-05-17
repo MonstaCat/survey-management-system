@@ -41,10 +41,14 @@
             <div class="col-12 col-xl-4">
                 <div class="card card-plain h-100">
                     <!-- <div class="card-header pb-0 p-3">
-                        <h6 class="mb-0">Akreditasi</h6>
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center">
+                                <h6 class="mb-0">Perguruan Tinggi</h6>
+                            </div>
+                        </div>
                     </div> -->
                     <div class="card-body p-3">
-                        <h6 class="text-uppercase text-body text-l font-weight-bolder mt-2">Perguruan Tinggi</h6>
+                        <h6 class="text-uppercase text-body text-l font-weight-bolder mt-2 mb-3">Perguruan Tinggi</h6>
                         <ul class="list-group">
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">NPSN:</strong> &nbsp; 201005</li>
                             <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Bentuk Pendidikan:</strong> &nbsp; Universitas</li>
@@ -60,12 +64,12 @@
                     <!-- <div class="card-header pb-0 p-3">
                         <div class="row">
                             <div class="col-md-12 d-flex align-items-center">
-                                <h6 class="mb-0">Informasi Pembina</h6>
+                                <h6 class="mb-0">Program Studi</h6>
                             </div>
                         </div>
                     </div> -->
                     <div class="card-body p-3">
-                        <h6 class="text-uppercase text-body text-l font-weight-bolder mt-2">Program Studi</h6>
+                        <h6 class="text-uppercase text-body text-l font-weight-bolder mt-2 mb-3">Program Studi</h6>
                         <ul class="list-group">
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Nama Program Studi:</strong> &nbsp; Manajemen Perusahaan</li>
                             <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Kode Program Studi:</strong> &nbsp; 61405</li>
@@ -85,7 +89,7 @@
                         </div>
                     </div> -->
                     <div class="card-body p-3">
-                        <h6 class="text-uppercase text-body text-l font-weight-bolder mt-2">Pembina Perguruan Tinggi</h6>
+                        <h6 class="text-uppercase text-body text-l font-weight-bolder mt-2 mb-3">Pembina Perguruan Tinggi</h6>
                         <ul class="list-group">
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Induk Pembina:</strong> &nbsp; Ditjen Pendidikan Islam</li>
                             <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Pembina:</strong> &nbsp; PTA Islam Negeri</li>
