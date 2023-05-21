@@ -53,6 +53,25 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('user.panel.home');
+        $currentRoute = Route::currentRouteName();
+
+        $data = [
+            'title' => 'Home',
+            'currentRoute' => $currentRoute
+        ];
+
+        return view('user.panel.home', $data);
+    }
+
+    public function profile()
+    {
+        $currentRoute = Route::currentRouteName();
+
+        $data = [
+            'title' => 'Profile',
+            'currentRoute' => $currentRoute
+        ];
+
+        return view('user.panel.profile', $data);
     }
 }

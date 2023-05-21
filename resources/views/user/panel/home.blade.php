@@ -27,8 +27,7 @@
             <div class="nav-wrapper position-relative end-0">
                 <ul class="nav nav-pills nav-fill p-1" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="javascript:;" role="tab"
-                            aria-selected="true">
+                        <a class="nav-link mb-0 px-0 py-1" href="{{ route('profile') }}" aria-selected="true">
                             <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
                         </a>
                     </li>

@@ -11,7 +11,7 @@
 
 		@include('user._partials.navbar')
 
-		<div class="container-fluid px-2 px-md-4">
+		<div class="container-fluid {{ ($currentRoute === 'home') ? 'px-2 px-md-4' : 'py-4'}}">
 
 			@yield('content')
 
