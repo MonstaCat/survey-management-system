@@ -101,21 +101,21 @@
                                         <div class="card-body p-3">
                                             <div class="row">
                                                 <div class="col-md-12 mb-md-3">
-                                                    <div class="input-group input-group-outline my-3 mb-4">
+                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
                                                         <label class="form-label">Nama Program Studi</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="Manajemen Perusahaan">
                                                     </div>
-                                                    <div class="input-group input-group-outline my-3 mb-4">
+                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
                                                         <label class="form-label">Kode Program Studi</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="61405">
                                                     </div>
-                                                    <div class="input-group input-group-outline my-3 mb-4">
+                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
                                                         <label class="form-label">Jenjang Pendidikan</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="D3">
                                                     </div>
-                                                    <div class="input-group input-group-outline">
+                                                    <div class="input-group input-group-outline is-filled">
                                                         <label class="form-label">Akreditasi Program Studi</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="B">
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,17 +137,17 @@
                                         <div class="card-body p-3">
                                             <div class="row">
                                                 <div class="col-md-12 mb-md-3 mb-4">
-                                                    <div class="input-group input-group-outline my-3 mb-4">
+                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
                                                         <label class="form-label">Induk Pembina</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="Dirjen Pendidikan Islam">
                                                     </div>
-                                                    <div class="input-group input-group-outline my-3 mb-4">
+                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
                                                         <label class="form-label">Pembina</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="PTA Islam Negeri">
                                                     </div>
-                                                    <div class="input-group input-group-outline">
+                                                    <div class="input-group input-group-outline is-filled">
                                                         <label class="form-label">Provinsi</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" value="Riau">
                                                     </div>
                                                 </div>
                                             </div>
