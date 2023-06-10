@@ -125,7 +125,7 @@
                     </ul>
                 </li>
                 <li class="nav-item d-flex align-items-center">
-                    <a href="{{ asset('material-dashboard/pages/sign-in.html') }}"
+                    <a href="{{ route('profile') }}"
                         class="nav-link text-body font-weight-bold px-0">
                         <i class="fa fa-user me-sm-1"></i>
                         <span class="d-sm-inline d-none">DIMAS NUGROHO</span>

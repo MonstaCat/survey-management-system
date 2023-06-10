@@ -74,4 +74,16 @@ class HomeController extends Controller
 
         return view('user.panel.profile', $data);
     }
+
+    public function survey()
+    {
+        $currentRoute = Route::currentRouteName();
+
+        $data = [
+            'title' => 'Survey',
+            'currentRoute' => $currentRoute
+        ];
+
+        return view('user.panel.survey', $data);
+    }
 }
