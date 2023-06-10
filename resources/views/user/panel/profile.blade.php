@@ -12,9 +12,8 @@
                             class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-100" alt="pattern-tree">
                         <span class="mask bg-gradient-dark opacity-10"></span>
                         <div class="card-body position-relative z-index-1 p-3">
-                            <i class="material-icons text-white p-2">wifi</i>
-                            <h5 class="text-white mt-4 mb-5 pb-2">
-                                4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852</h5>
+                            <i class="fas fa-school text-white fa-3x"></i>
+                            <h5 class="text-white mt-4 mb-5 pb-2">Universitas Islam Negeri Sultan Syarif Kasim Riau</h5>
                             <div class="d-flex">
                                 <div class="d-flex">
                                     <div class="me-4">
@@ -27,7 +26,7 @@
                                     </div>
                                 </div>
                                 <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
-                                    <img class="w-60 mt-2"
+                                    <img class="w-40 mt-2"
                                         src="{{ asset('material-dashboard/assets/img/logos/mastercard.png') }}"
                                         alt="logo">
                                 </div>
@@ -85,71 +84,63 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body" style="padding-bottom: 50px;">
+                    <div class="card-body" style="padding-bottom: 30px;">
                         <div class="row">
-                            <div class="col-md-6 mb-md-0 mb-4">
-                                <div
-                                    class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                            <div class="col-md-6 mb-md-6 mb-4">
+                                <div class="card card-body border card-plain border-radius-lg">
                                     <div class="col-md-12 mb-lg-0 mb-4">
                                         <div class="card-header pb-0 p-3">
                                             <div class="row">
-                                                <div class="col-6 d-flex align-items-center">
+                                                <div class="col-12 d-flex align-items-center">
                                                     <h6 class="mb-0">Data Program Studi</h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body p-3">
-                                            <div class="row">
-                                                <div class="col-md-12 mb-md-3">
-                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
-                                                        <label class="form-label">Nama Program Studi</label>
-                                                        <input type="text" class="form-control" value="Manajemen Perusahaan">
-                                                    </div>
-                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
-                                                        <label class="form-label">Kode Program Studi</label>
-                                                        <input type="text" class="form-control" value="61405">
-                                                    </div>
-                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
-                                                        <label class="form-label">Jenjang Pendidikan</label>
-                                                        <input type="text" class="form-control" value="D3">
-                                                    </div>
-                                                    <div class="input-group input-group-outline is-filled">
-                                                        <label class="form-label">Akreditasi Program Studi</label>
-                                                        <input type="text" class="form-control" value="B">
-                                                    </div>
-                                                </div>
+                                        <div class="card-body p-0 my-3">
+                                            <label class="form-label">Nama Program Studi</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="email" class="form-control mb-3"
+                                                    value="Manajemen Perusahaan">
+                                            </div>
+                                            <label class="form-label">Kode Program Studi</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="text" class="form-control mb-3" value="61405">
+                                            </div>
+                                            <label class="form-label">Jenjang Pendidikan</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="text" class="form-control mb-3" value="D3">
+                                            </div>
+                                            <label class="form-label">Akreditasi Program Studi</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="text" class="form-control mb-3" value="B">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div
-                                    class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                <div class="card card-body border card-plain border-radius-lg">
                                     <div class="col-md-12 mb-lg-0 mb-4">
                                         <div class="card-header pb-0 p-3">
                                             <div class="row">
-                                                <div class="col-6 d-flex align-items-center">
+                                                <div class="col-12 d-flex align-items-center">
                                                     <h6 class="mb-0">Data Pembina</h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body p-3">
-                                            <div class="row">
-                                                <div class="col-md-12 mb-md-3 mb-4">
-                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
-                                                        <label class="form-label">Induk Pembina</label>
-                                                        <input type="text" class="form-control" value="Dirjen Pendidikan Islam">
-                                                    </div>
-                                                    <div class="input-group input-group-outline my-3 mb-4 is-filled">
-                                                        <label class="form-label">Pembina</label>
-                                                        <input type="text" class="form-control" value="PTA Islam Negeri">
-                                                    </div>
-                                                    <div class="input-group input-group-outline is-filled">
-                                                        <label class="form-label">Provinsi</label>
-                                                        <input type="text" class="form-control" value="Riau">
-                                                    </div>
-                                                </div>
+                                        <div class="card-body p-0 my-3">
+                                            <label class="form-label">Induk Pembina</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="text" class="form-control mb-3"
+                                                    value="Ditjen Pendidikan Islam">
+                                            </div>
+                                            <label class="form-label">Pembina</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="text" class="form-control mb-3" value="PTA Islam Negeri">
+                                            </div>
+                                            <label class="form-label">Provinsi</label>
+                                            <div class="input-group input-group-outline">
+                                                <input type="text" class="form-control mb-3" value="Riau">
                                             </div>
                                         </div>
                                     </div>
@@ -161,7 +152,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4">
+    <!-- <div class="col-lg-4">
         <div class="card h-100">
             <div class="card-header pb-0 p-3">
                 <div class="row">
@@ -238,7 +229,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 @stop
