@@ -128,7 +128,7 @@
                     <a href="{{ route('profile') }}"
                         class="nav-link text-body font-weight-bold px-0">
                         <i class="fa fa-user me-sm-1"></i>
-                        <span class="d-sm-inline d-none">DIMAS NUGROHO</span>
+                        <span class="d-sm-inline d-none">{{ Auth::user()->name }}</span>
                     </a>
                 </li>
             </ul>

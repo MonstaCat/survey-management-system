@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Question;
 use App\Models\SurveyResult;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -78,10 +79,15 @@ class HomeController extends Controller
     public function survey()
     {
         $currentRoute = Route::currentRouteName();
+        $response = Request::create('/api/questions');
+        $questions = json_decode(Route::dispatch($response)->getContent(), true);
+        $categories = Category::all();
 
         $data = [
             'title' => 'Survey',
-            'currentRoute' => $currentRoute
+            'currentRoute' => $currentRoute,
+            'questions' => $questions,
+            'categories' => $categories
         ];
 
         return view('user.panel.survey', $data);

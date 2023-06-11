@@ -28,16 +28,27 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($questions as $question)
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
                                             <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">Hak dan Kewajiban Dasar</h6>
+                                                <h6 class="mb-0 text-sm">
+                                                    @if($question['category'])
+                                                    @foreach($categories as $category)
+                                                    @if($category['_id'] == $question['category'])
+                                                    {{ $category['category'] }}
+                                                    @endif
+                                                    @endforeach
+                                                    @else
+                                                    No Category
+                                                    @endif
+                                                </h6>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <p class="text-xs font-weight-bold mb-0">Apakah Dosen dan Tenaga Kependidikan sudah menerima hak yang layak berdasarkan kewajiban dan tanggung jawab yang diampu?</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $question['question'] }}</p>
                                     </td>
                                     <td class="align-middle text-center text-sm">
                                         <span class="badge badge-sm bg-gradient-primary">Belum Mengisi</span>
@@ -49,27 +60,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex px-2 py-1">
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">Struktur Organisasi</h6>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs font-weight-bold mb-0">Apakah Perguruan Tinggi memiliki Struktur Organisasi yang sah?</p>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="badge badge-sm bg-gradient-primary">Belum Mengisi</span>
-                                    </td>
-                                    <td class="align-middle">
-                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                            data-toggle="tooltip" data-original-title="Edit user">
-                                            Isi Survey
-                                        </a>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
