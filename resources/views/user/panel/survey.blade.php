@@ -28,6 +28,7 @@
                 </div>
             </div>
         </div>
+        @if ($userHasTakenSurvey == 0)
         @foreach($categories as $category)
         <div class="col-12">
             <div class="card my-4">
@@ -61,6 +62,9 @@
             @endforeach
             <button type="submit" class="btn btn-block btn-primary mb-3 col-12">Cek Hasil</button>
         </form>
+        @else
+        <h2>Hasil Survey</h2>
+        @endif
     </div>
 </div>
 
