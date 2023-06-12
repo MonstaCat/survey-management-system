@@ -9,7 +9,7 @@ class SurveyResult extends Model
 {
     use HasFactory;
     protected $connection = 'mongodb';
-    protected $collection = 'survey_result';
+    protected $collection = 'data_perguruan_tinggi';
     protected $fillable = [
         'google_id', 'question_id', 'answer', 'conclusion', 'recommendation', 'question', 'name'
     ];

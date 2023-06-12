@@ -82,7 +82,7 @@ class HomeController extends Controller
         $response = Request::create('/api/questions');
         $questions = json_decode(Route::dispatch($response)->getContent(), true);
         $categories = Category::all();
-
+        
         $data = [
             'title' => 'Survey',
             'currentRoute' => $currentRoute,
