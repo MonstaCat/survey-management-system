@@ -52,7 +52,7 @@ class SurveyResultController extends Controller
         }
 
         // Redirect the user to the result page
-        return redirect('/home');
+        return redirect('/survey');
     }
 
     public function result_delete(Request $request, $id)

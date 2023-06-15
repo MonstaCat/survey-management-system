@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\SurveyResultController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,9 +54,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
-Route::get('/survey', [App\Http\Controllers\HomeController::class, 'survey'])->name('survey');
-Route::post('/submit', [App\Http\Controllers\HomeController::class, 'submit'])->name('survey.submit');
-Route::get('/login/google', [App\Http\Controllers\Auth\LoginController::class, 'LoginWithGoogle'])->name('login.google');
-Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'GoogleCallback']);
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/survey', [HomeController::class, 'survey'])->name('survey');
+Route::post('/submit', [SurveyResultController::class, 'store'])->name('survey.submit');
+Route::get('/login/google', [LoginController::class, 'LoginWithGoogle'])->name('login.google');
+Route::get('/auth/google/callback', [LoginController::class, 'GoogleCallback']);
