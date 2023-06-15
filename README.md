@@ -20,7 +20,7 @@ This project using Laravel 9 for the framework and using MongoDB Atlas for the d
 
 Run this following commands in your terminal
 
-`composer install` and `composer update`
+`composer install`
 
 and wait until the process is done.
 
@@ -28,7 +28,7 @@ and wait until the process is done.
 
 Run this following commands in your terminal
 
-`npm run build`
+`npm install` and `npm run build`
 
 <b>Step 3:</b>
 
