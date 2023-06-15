@@ -3,45 +3,28 @@
 @section('content')
 
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <div class="row">
-            <div class="col-xl-6 mb-xl-0 mb-4">
+            <div class="col-xl-8 mb-xl-4 mb-4">
                 <div class="card bg-transparent shadow-xl">
                     <div class="overflow-hidden position-relative border-radius-xl">
                         <img src="{{ asset('material-dashboard/assets/img/illustrations/pattern-tree.svg') }}"
-                            class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-100" alt="pattern-tree">
+                            class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-80" alt="pattern-tree">
                         <span class="mask bg-gradient-dark opacity-10"></span>
                         <div class="card-body position-relative z-index-1 p-3">
-                            <i class="fas fa-school text-white fa-3x"></i>
-                            <h5 class="text-white mt-4 mb-5 pb-2">Universitas Islam Negeri Sultan Syarif Kasim Riau</h5>
-                            <div class="d-flex">
-                                <div class="d-flex">
-                                    <div class="me-4">
-                                        <p class="text-white text-sm opacity-8 mb-0"></p>
-                                        <h6 class="text-white mb-0"></h6>
-                                    </div>
-                                    <div>
-                                        <p class="text-white text-sm opacity-8 mb-0"></p>
-                                        <h6 class="text-white mb-0"></h6>
-                                    </div>
-                                </div>
-                                <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
-                                    <img class="w-40 mt-2"
-                                        src="{{ asset('material-dashboard/assets/img/logos/mastercard.png') }}"
-                                        alt="logo">
-                                </div>
-                            </div>
+                            <i class="fas fa-school text-white fa-3x mx-3 mt-3"></i>
+                            <h5 class="text-white mt-4 mb-5 mx-3 pb-2">Universitas Islam Negeri Sultan Syarif Kasim Riau</h5>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-4">
                 <div class="row">
                     <div class="col-md-6 col-6">
                         <div class="card">
                             <div class="card-header mx-4 p-3 text-center">
                                 <div
-                                    class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                    class="icon icon-shape icon-lg bg-gradient-warning shadow text-center border-radius-lg">
                                     <i class="material-icons opacity-10">school</i>
                                 </div>
                             </div>
@@ -57,7 +40,7 @@
                         <div class="card">
                             <div class="card-header mx-4 p-3 text-center">
                                 <div
-                                    class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                    class="icon icon-shape icon-lg bg-gradient-warning shadow text-center border-radius-lg">
                                     <i class="material-icons opacity-10">people</i>
                                 </div>
                             </div>
@@ -160,7 +143,7 @@
                         <h6 class="mb-0">Invoices</h6>
                     </div>
                     <div class="col-6 text-end">
-                        <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
+                        <button class="btn btn-outline-warning btn-sm mb-0">View All</button>
                     </div>
                 </div>
             </div>
