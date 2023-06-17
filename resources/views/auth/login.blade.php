@@ -1,88 +1,80 @@
-<section class="vh-100" style="background-color: #52E0E7;">
-@extends('layouts.app')
+@extends('auth._partials.default')
 
-@section('content' )
+@section('content')
 
-<!-- Section: Design Block -->
-  <!-- Jumbotron -->
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: #52E0E7;">
-    <div class="container">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight">
-            Selamat Datang <br />
-            <span class="text-primary">di platform Survey Management</span>
-          </h1>
-        </div>
-
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <div class="card">
-            <div class="card-body py-5 px-md-5">
-            <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                <label for="email" class="flex-column col-form-label">{{ __('Email Address') }}</label>
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
+<body class="bg-gray-200">
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+      </div>
+    </div>
+  </div>
+  <main class="main-content  mt-0">
+    <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-4 col-md-8 col-12 mx-auto">
+            <div class="card z-index-0 fadeIn3 fadeInBottom">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-warning shadow-primary border-radius-lg py-3 pe-1">
+                  <h4 class="text-white font-weight-bolder text-center mb-0">Survey Management</h4>
                 </div>
+              </div>
+              <div class="card-body">
+                <form method="POST" action="{{ route('login') }}">
+                  <div class="input-group input-group-outline my-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control">
+                  </div>
+                  <div class="input-group input-group-outline mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="form-check form-switch d-flex align-items-center mb-3">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                    <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn bg-gradient-warning w-100 my-4 mb-2" type="submit">Login</button>
+                  </div>
+                  <p class="mb-2 text-center">or</p>
+                  <div class="text-center">
+                    <!-- <button type="button" class="btn bg-gradient-primary w-100 mb-2">Login with Google</button> -->
+                    <a href="{{ route('login.google') }}" class="btn bg-gradient-info w-100 mb-2" style="background-color: #dd4b39;"><i class="fab fa-google me-2"></i>{{ __('Login with Google') }}</a>
+                      <!-- @if (Route::has('password.request'))
+                          <a class="btn btn-link float-left pl-0 mt-2" href="{{ route('password.request') }}">
+                              {{ __('Forgot Your Password?') }}
+                          </a>
+                      @endif -->
+                  </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                <label for="password" class="flex-column col-form-label">{{ __('Password') }}</label>
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                    @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                
-                </div>
-
-                <!-- Checkbox -->
-                <div class="form-check d-flex mb-4">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                    <span class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                    </span>
-                </div>
-
-                <!-- Submit button -->
-                <div class="text-center">
-                    <button class="btn btn-info btn-block text-light mb-2" type="submit">
-                        {{ __('Login') }}
-                    </button>
-                </div>
-
-                <!-- Register buttons -->
-                <div class="text-center">
-                  <p class="mb-2">or</p>
-                  <a href="{{ route('login.google') }}" class="btn btn-block text-light" style="background-color: #dd4b39;"><i class="fab fa-google me-2"></i>{{ __('Login with Google') }}</a>
-                  @if (Route::has('password.request'))
-                      <a class="btn btn-link float-left pl-0 mt-2" href="{{ route('password.request') }}">
-                          {{ __('Forgot Your Password?') }}
-                      </a>
-                  @endif
-                  <!-- <small class="d-block mt-3">Doesn't have an account? <a class="text-danger" href="/register">
-                        Register
-                        Now!</a></small> -->
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Jumbotron -->
-</section>
-<!-- Section: Design Block -->
-@endsection
+  </main>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
+</body>
+
+@stop
